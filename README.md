@@ -16,7 +16,7 @@ gulp build
 ```
 
 ### Website
-[https://dr-nurten.cdn.az](https://dr-nurten.cdn.az)
+[https://dr-nurten.pages.dev](https://dr-nurten.pages.dev)
 
 #### Pages
 
