@@ -411,12 +411,14 @@ strong {
 		animation-name: fadeInDown;
 		-webkit-animation-duration: 1.25s;
 		animation-duration: 1.25s;
+		
 		@media (max-width: 991px){
 			padding-left: 0;
 			padding-right: 0;
 		}
 		#header{
 			height: 55px;
+			box-shadow: 0 3px 11px #27392d21;
 			.inner{
 				height: 55px;
 				.logo{
@@ -476,7 +478,21 @@ strong {
 		}
 	}
 }
-
+.bg_overlay {
+	background: rgba(0, 0, 0, 0);
+	height: 100vh;
+	width: 100%;
+	position: fixed !important;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	display: none;
+	-webkit-transition: background 0.15s linear;
+	-o-transition: background 0.15s linear;
+	transition: background 0.15s linear;
+}
 .btn {
 	display: inline-flex;
 	align-items: center;
@@ -624,8 +640,8 @@ strong {
 			height: 100%;
 			position: absolute;
 			background-color: #13bfb1;
-			-webkit-mask: url(../images/shadow.svg) no-repeat left -73px top 35px;
-			mask: url(../images/shadow.svg) no-repeat left -73px top 35px;
+			-webkit-mask: url(../images/shadow.svg) no-repeat left -136px top -45px;
+			mask: url(../images/shadow.svg) no-repeat left -136px top -45px;
 			-webkit-mask-size: 100% auto;
 			mask-size: 100% auto;
 		}
@@ -815,6 +831,74 @@ strong {
 		}
     }
 }
+.blog-detail-wrapper {
+	max-width: 800px;
+    margin: auto;
+	padding-bottom: 60px;
+	.img{
+		img{
+			width: 100%;
+		}
+	}
+    .title-wrap {
+        margin: 80px 0 16px;
+		@media (max-width: 991px){
+			margin-top: 40px;
+		}
+    }
+	.date-share {
+		margin: 20px 0 15px;
+		display: flex;
+	}
+	.img {
+		overflow: hidden;
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			width: 100%;
+			float: none;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.text {
+		font-size: 16px;
+        font-weight: 400;
+		color: #020608;
+		line-height: 25px;
+		p,
+		div {
+			padding: 10px 0;
+			&:first-child {
+				padding-top: 0;
+			}
+		}
+	}
+}
+.date-share {
+	display: flex;
+	.date {
+		font-weight: 400;
+        font-size: 14px;
+		color: #353535;
+		line-height: 25px;
+		display: flex;
+		align-items: center;
+		margin-right: 27px;
+	}
+	.share {
+		height: 30px;
+		border-radius: 15px;
+		background: url("../images/fb1.svg") 10px center no-repeat #1b74e4;
+		font-weight: 400;
+        font-size: 14px;
+		color: #fff;
+		align-items: center;
+		display: flex;
+		padding: 0 10px 0 32px;
+		text-decoration: none;
+	}
+}
 .gallery{
 	.image{
 		height: 250px;
@@ -932,6 +1016,8 @@ strong {
 .about{
 	background: #d3eeec;
     padding: 30px 30px 60px;
+	background: url(../images/apply-bg.svg) left center no-repeat #d3eeec;
+    background-size: contain;
 	.text{
 		p{
 			padding-bottom: 8px;
@@ -1106,10 +1192,6 @@ strong {
 			-webkit-mask-size: get-vw(8px) auto;
 			mask-size: get-vw(8px) auto;
 		}
-	}
-
-	&[disabled] {
-		background-color: rgba(#282e36, 0.15);
 	}
 	&[data-controls="next"] {
 		left: auto;

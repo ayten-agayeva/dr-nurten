@@ -5,7 +5,7 @@
 	left: -100vw;
 	top: 0;
 	display: none;
-	z-index: 999;
+	z-index: 67;
 	background: #353535;
 	overflow-y: auto;
 	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -14,6 +14,15 @@
 	}
 	&.active {
 		left: 0;
+		.bg_overlay {
+			display: block;
+			background: rgba(0, 0, 0, 0.2);
+			z-index: 9;
+		}
+		>*{
+			position: relative;
+			z-index: 22;
+		}
 	}
 	.container {
 		padding: 0 20px;
@@ -69,8 +78,8 @@
 		display: flex;
 		align-items: center;
 		span {
-			font-size: 16px;
-			color: #E2EFF8;
+			font-size: 14px;
+			color: #353535;
 			position: relative;
 			cursor: pointer;
 			padding-right: 14px;
@@ -82,7 +91,6 @@
 				display: flex;
 				align-items: center;
 				font-weight: 400;
-				font-size: get-vw(16px);
 			}
 			&:after {
 				content: "";
@@ -102,7 +110,7 @@
 			position: absolute;
 			right: 0;
 			margin-left: -45px;
-			top: 27%;
+			top: 24%;
 			margin-top: 31px;
 			width: 100%;
 			background: #fff;
@@ -121,8 +129,8 @@
 				align-items: center;
 				justify-content: center;
 				cursor: pointer;
-				font-size: 16px;
-				color: #000;
+				font-size: 14px;
+				color: #353535;
 				height: 42px;
 				overflow: hidden;
 				padding: 0 15px;
@@ -137,7 +145,7 @@
 		&:hover,
 		&.active {
 			padding: 10px 0 10px 10px;
-			background: #14568c;
+			background: #13bfb1;
 			span {
 				&::after {
 					-webkit-transform: rotate(-180deg);
@@ -164,10 +172,10 @@
 			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 			> a {
 				color: #D9D9D9;
-				font-size: 16px;
+				font-size: 15px;
 				display: flex;
 				align-items: center;
-				padding: get-vw(16px) 0;
+				padding: get-vw(13px) 0;
 				position: relative;
 				line-height: get-vw(16px);
 				font-family: 'Open Sans', sans-serif !important;
@@ -282,6 +290,11 @@
 	.social {
 		display: flex;
 		justify-content: center;
+		position: absolute;
+		bottom: 0;
+		margin-left: 0;
+		left: 0;
+		right: 0;
 		a {
 			margin-left: 0;
 			margin: 100px 15px 36px;

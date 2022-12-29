@@ -122,6 +122,11 @@ const mobileSupport = (media) => {
 				setTimeout(() => $(".mobile-menu").toggleClass("active"), 10);
 				$("body").addClass("disable_scroll");
 			});
+			$(".mobile-menu nav li .nav-link").click(function () {
+				$(".mobile-menu").removeClass("nav_open active");
+				setTimeout(() => $(".mobile-menu").toggleClass("animate"), 400);
+				$("body").toggleClass("disable_scroll");
+			});
 		}
 
 		$("[data-mobile-pos]").each(function () {
@@ -150,3 +155,19 @@ const mobileSupport = (media) => {
 		$(document).trigger("mobile_off");
 	}
 };
+
+$(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+  
