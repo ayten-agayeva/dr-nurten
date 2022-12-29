@@ -49,12 +49,12 @@ $(document).ready(() => {
 	if ($(".gallery .slider").length) {
 		tns({
 			container: ".gallery .slider",
-			items: 1.5,
+			items: 1,
 			gutter: 15,
 			controlsText: ["", ""],
 			nav: false,
 			loop: false,
-			controls: false,
+			controls: true,
 			responsive: {
 				550: {
 					items: 4,

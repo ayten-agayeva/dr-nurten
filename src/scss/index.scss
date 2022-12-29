@@ -501,7 +501,7 @@ strong {
 	padding: 0 32px;
 	font-weight: 500;
 	font-size: 13px;
-	background-color: #13bfb1;
+	background-color: #353535;
 	color: #fff;
 	font-family: 'Roboto Condensed',sans-serif;
 	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -993,18 +993,25 @@ strong {
 		}
 	}
 	@media (max-width: 991px){
-		padding: 30px 15px 10px;
+		padding: 30px 15px 70px;
 		.tns-outer {
 			.tns-controls {
-				display: none !important;
+				height: 34px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -30px;
+				text-align: center;
 				button {
-					left: -5px;
+					position: relative;
+					left: auto;
 					&:before {
 						-webkit-mask-size: 6px auto;
 						mask-size: 6px auto;
 					}
 					&[data-controls="next"] {
-						right: -5px;
+						position: relative;
+						right: auto;
 					}
 				}
 			}
@@ -1168,7 +1175,7 @@ strong {
 	margin-top: -22px;
 	width: 64px;
 	height: 64px;	
-	background-color: #b4e1dd;
+	background-color: #353535;
 	margin: 0 5px;
 	z-index: 1;
 	left: 0;
@@ -1183,7 +1190,7 @@ strong {
 		display: block;
 		width: 100%;
 		height: 100%;
-		background-color: #353535;
+		background-color: #fff;
 		-webkit-mask: url("../images/tns-arrow.svg") no-repeat center;
 		mask: url("../images/tns-arrow.svg") no-repeat center;
 		@media (max-width: 991px) {
@@ -1199,6 +1206,6 @@ strong {
 		transform: rotate(-180deg);
 	}
 	&:hover{
-		background-color: #13bfb1;
+		opacity: .8;
 	}
 }
