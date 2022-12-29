@@ -510,8 +510,7 @@ strong {
 	}
 }
 .bg-home {
-	height: 100vh;
-	min-height:620px;
+	min-height: 515px;
 	position: relative;
 	background: url("../images/home-line.png") center no-repeat;
 	background-size: contain;
@@ -529,8 +528,7 @@ strong {
 		position: relative;
 		z-index: 1;
 		width: 100%;
-		height: 100vh;
-		min-height:620px;
+		min-height: 515px;
 		display: flex;
 		align-items: center;
 		box-shadow: 0px 4px 16px rgba(23, 109, 167, 0.1);
@@ -662,7 +660,7 @@ strong {
 }
 .services{
 	background: #eeeeed;
-	margin-top: -138px;
+	margin-top: -86px;
 	z-index: 8;
 	position: relative;
 	.cl-row{
