@@ -487,7 +487,7 @@ strong {
 	font-size: 13px;
 	background-color: #13bfb1;
 	color: #fff;
-	letter-spacing: 1.25px;
+	font-family: 'Roboto Condensed',sans-serif;
 	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 	&:hover {
 		opacity: .8;
@@ -499,9 +499,9 @@ strong {
 	position: relative;
 	background: url("../images/home-line.png") center no-repeat;
 	background-size: contain;
-	@media (max-width: 480px) {
-		height: auto;
-		min-height: get-vw(461px);
+	@media (max-width: 767px) {
+		height: auto !important;
+		min-height: auto !important;
 	}
 	@media only screen and (min-width: 480px) and (max-width: 520px) {
 		height: 650px;
@@ -533,7 +533,7 @@ strong {
 		}
 		@media (max-width: 991px) {
 			height: auto;
-			min-height: get-vw(461px);
+			min-height: auto;
 			padding-bottom: 10px;
 		}
 	}
@@ -597,7 +597,7 @@ strong {
 			margin-bottom: 0;
 			width: 100%;
 			.img{
-				width: 220px;
+				width: 50%;
 				img{
 					width: 100%;
 				}
@@ -638,7 +638,7 @@ strong {
 			.left{
 				    position: absolute;
 					right: 0;
-					top: 45%;
+					top: 30%;
 					max-width: 55%;
 			}
 		}
@@ -699,7 +699,7 @@ strong {
 		}
 	}
 	@media (max-width: 991px){
-		margin-top: -68px;
+		margin-top: -14px;
 		padding: 10px 0 20px;
 		.cl-row{
 			flex-wrap: wrap;
@@ -800,6 +800,10 @@ strong {
 		.btn-wrap{
 			position: absolute;
     		bottom: 40px;
+			.btn{
+				background-color: #353535;
+				color: #eeeeed;
+			}
 		}
 		.item{
 			.img{
